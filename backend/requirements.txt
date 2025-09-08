@@ -1,0 +1,47 @@
+﻿========================================
+REQUIREMENT SISTEM MONITORING PUSKESMAS
+========================================
+
+1. FRONTEND
+   - Framework: React.js
+   - UI Library: Tailwind CSS / Material UI
+   - Fitur:
+     * Dashboard menampilkan statistik (jumlah pasien, antrian, dokter).
+     * Halaman CRUD pasien (tambah, lihat, edit, hapus).
+     * Halaman daftar antrian pasien per hari.
+     * Halaman riwayat kunjungan pasien.
+     * Autentikasi login petugas/admin.
+
+2. BACKEND
+   - Framework: Flask (Python)
+   - Database: MySQL
+   - Fitur API:
+     * /api/dashboard → data statistik.
+     * /api/pasien → CRUD pasien.
+     * /api/antrian → manajemen antrian.
+     * /api/kunjungan → riwayat medis pasien.
+     * /api/auth → login/logout user.
+
+3. DATABASE (MySQL)
+   - Tabel: pasien, dokter, antrian, kunjungan, users.
+   - Relasi:
+     * pasien 1 - n antrian
+     * pasien 1 - n kunjungan
+     * dokter 1 - n antrian
+     * dokter 1 - n kunjungan
+
+4. NON-FUNCTIONAL REQUIREMENT
+   - Sistem harus bisa diakses melalui web browser.
+   - Mendukung multi-user (admin & petugas).
+   - Keamanan password (disimpan hash, bukan plain text).
+   - Responsif (mobile-friendly).
+   - Logging error untuk debugging backend.
+
+5. TOOLS
+   - Node.js (untuk React)
+   - Python 3.x (untuk Flask)
+   - MySQL/MariaDB
+   - Postman (untuk testing API)
+   - Git (untuk version control)
+
+========================================
